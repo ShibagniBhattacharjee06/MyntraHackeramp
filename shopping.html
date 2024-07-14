@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="personal profile of shibagni">
+    <title>CustomCouture SHOPPING</title>
+    <link rel="icon" href="custom.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="shopping.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="shopping.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-logo">
+                <img src="custom.jpg" alt="logo">
+            </a>
+            <div id="dark-mode-toggle" class="dark-mode-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <center>
+        <header class="header-container">
+            <h1>Are you <span class="about-me"></span></h1>
+            <img src="custom.jpg" alt="shibagni pic" class="header-image">
+            <h1 class="expand-text">YOU ARE AT THE RIGHT PLACE<span class="about-me"></span></h1>
+            <p style="font-size: larger; color: black;">
+                <video id="introVideo" src="intro1.mp4" autoplay muted width="100%" class="intro-video"></video>
+                <p>Looking for a unique dress tailored to your style and fit? Our expert tailors collaborate with you to design the perfect dress, using advanced techniques for a flawless finish. Whether casual or formal, our custom-made dresses ensure you stand out. Order online today and bring your dream dress to life!
+            </p>
+            <p><b>Go Through our Catalogue</b></p>
+            <a href="CustomCouture.pdf" class="catalogue-button" download>Download catalogue</a>
+            <hr>
+        </header>
+
+        <section>
+            <h1>OUR EXCITING OFFERS</h1>
+            <div class="horizontal-scroll">
+                <div class="icon-container">
+                    <img src="im.jpg" alt="Icon 1">
+                    <img src="im2.jpg" alt="Icon 2">
+                    <img src="im3.jpg" alt="Icon 3">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+            <hr>
+        </section>
+
+        <section>
+            <h2>PRODUCTS</h2>
+            <p>CLICK TO BUY</p>
+            <section id="projects">
+                <div class="project-thumbnail">
+                    <div class="thumbnail-content">
+                        <img src="img1.jpg" alt="Project 1">
+                        <h3>DRESSES</h3>
+                        <p>Explore our Dresses Section for a wide range of stylish and comfortable dresses in various styles and sizes, ensuring the perfect fit for everyone. Shop with confidence and find your new favorite dress today!</p>
+                        <a href="dress.html" class="btn">CLICK HERE</a>
+                    </div>
+                </div>
+                <div class="project-thumbnail">
+                    <div class="thumbnail-content">
+                        <img src="img2.jpg" alt="Project 2">
+                        <h3>ACCESSORIES</h3>
+                        <p>Discover our Accessories Section to find the perfect finishing touches for your dream outfit. From elegant jewelry to chic handbags and more, we have everything you need to complete your look with style and confidence.</p>
+                        <a href="Accesories.html" class="btn">CLICK HERE</a>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <h2>CONTACT US</h2>
+                <a href="mailto:bhattacharjeesagshi1234@gmail.com" class="icon-link email-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+1234567890" class="icon-link call-icon">
+                    <i class="fas fa-phone" style="color:green;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/shibagni-bhattacharjee-07a944283/" class="icon-link linkedin-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </section>
+            <hr>
+            <section>
+                <h2>Customized Tailor Service</h2>
+                <p>Have a vision for the perfect outfit? Whether it's a dress, suit, or any fashion piece, we're here to bring your imagination to life. Fill out the form below with your details and design ideas, and our expert team will get in touch with you to create the garment of your dreams. Let's craft something unique, just for you!</p>
+                <iframe src="https://forms.gle/Gfx6NpSEATYCpVuY6" width="640" height="480" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </section>
+            
+            <hr>
+            <p>SEND YOUR QUERIES ABOUT ME</p>
+            <form action="https://formsubmit.co/64d6f50a2574a058a528330456a05012" method="POST">
+                <input type="text" name="_honey" style="display:none;">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://shibagnibhattacharjee06.github.io/my/success.html">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="contactNumber">Contact Number:</label>
+                <input type="text" id="contactNumber" name="contactNumber"><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea><br><br>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </center>
+    <footer>
+        <p>&copy; 2024 CustomCouture</p>
+    </footer>
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('nav-menu-visible');
+        });
+    </script>
+</body>
+</html>

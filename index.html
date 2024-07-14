@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUSTOMCOUTURE</title>
+    <link rel="stylesheet" href="pop.css">
+    <style>
+        .intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .intro-text {
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .intro-videos {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .intro-videos video {
+            width: 20%;
+            margin: 0 10px;
+        }
+
+        .intro-actions {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="custom.jpg" alt="Store Logo" style="width: 50px; height: 50px;">
+        <h1>Where Style Meets Personalization – Welcome to CustomCouture!</h1>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="intro-videos">
+                <video src="v1.mp4" autoplay muted loop></video>
+                <video src="v2.mp4" autoplay muted loop></video>
+            </div>
+            <div class="intro-text">
+                <h2>Design Your Wardrobe, Your Way!</h2>
+                <p>Struggling to Achieve Your Dream Look? Finding it Hard to Get the Perfect Fit or Design? Want to Emulate Your Favorite Actress's Style? Look No Further! Explore Our Solutions and Click Below to Transform Your Wardrobe.</p>
+                <div class="intro-actions">
+                    <button id="openPopupBtn">Get Styled <span class="arrow">↓</span></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="girlPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <img src="popupgirl.jpg" alt="Girl Image" id="girlImage" class="girl-image">
+            <p id="girlSpeech"></p>
+            <a href="shopping.html" class="popup-btn">Go to Shopping</a>
+        </div>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById('girlPopup').style.display = 'block';
+            var speechText = "Hello and welcome to CustomCouture! Ready to explore the latest in personalized fashion? Click the button below to enter our shopping site and start your style journey with us.";
+            document.getElementById('girlSpeech').textContent = speechText;
+
+            var utterance = new SpeechSynthesisUtterance(speechText);
+            utterance.lang = 'en-US';
+
+            var voices = speechSynthesis.getVoices();
+            var femaleVoice = voices.find(function(voice) {
+                return voice.name === 'Google US English Female';
+            });
+
+            if (femaleVoice) {
+                utterance.voice = femaleVoice;
+            }
+
+            speechSynthesis.speak(utterance);
+        }
+
+        function closePopup() {
+            document.getElementById('girlPopup').style.display = 'none';
+            document.getElementById('girlSpeech').textContent = "";
+
+            if (speechSynthesis.speaking) {
+                speechSynthesis.cancel();
+            }
+        }
+
+        document.getElementById('openPopupBtn').addEventListener('click', openPopup);
+    </script>
+</body>
+</html>
